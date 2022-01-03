@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
+
+
 import { GridItemStyle } from '../grid-item'
 
 const variants = {
@@ -20,7 +22,7 @@ const Layout = ({ children, title }) => (
         <>
             {title && (
                 <Head>
-                    <title>{title} - Takuya Matsuyama</title>
+                    <title>{title} - Ali Ghodoosi</title>
                     <meta name="twitter:title" content={title} />
                     <meta property="og:title" content={title} />
                 </Head>
