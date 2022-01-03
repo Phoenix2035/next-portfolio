@@ -1,12 +1,15 @@
-import { Box, Container, Heading, Image, Button, Link, useColorModeValue } from "@chakra-ui/react"
+import { Box, Container, Heading, Image, Button, Link, List, ListItem, Icon, useColorModeValue } from "@chakra-ui/react"
 import NextLink from "next/link"
 import { ChevronRightIcon } from "@chakra-ui/icons"
+import { IoLogoGithub, IoLogoLinkedin, IoPhonePortraitSharp } from "react-icons/io5"
+
 
 
 import Layout from "../components/layouts/article"
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import { BioSection, BioYear } from "../components/bio"
+
 
 
 
@@ -87,6 +90,36 @@ const Page = () => {
                         Music, Playing, Series, Reading
                     </Paragraph>
                 </Section>
+
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        Contact
+                    </Heading>
+                    <List>
+                        <ListItem>
+                            <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoPhonePortraitSharp} />}>
+                                09917240664
+                            </Button>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href="https://github.com/masturdating1991" target="_blank">
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
+                                    Github
+                                </Button>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href="https://www.linkedin.com/in/ali-ghodousi" target="_blank">
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoLinkedin} />}>
+                                    Linkedin
+                                </Button>
+                            </Link>
+                        </ListItem>
+                    </List>
+                </Section>
+
             </Container>
         </Layout>
     )
