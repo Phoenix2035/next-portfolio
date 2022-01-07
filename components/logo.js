@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -26,8 +25,6 @@ const Logo = () => {
     const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
 
     return (
-        <Link href="/">
-            <a>
                 <LogoBox>
                     <Image src={footPrintImg} width={20} height={20} alt="logo" />
                     <Text
@@ -40,8 +37,6 @@ const Logo = () => {
                         Ali Ghodoosi
                     </Text>
                 </LogoBox>
-            </a>
-        </Link>
     )
 }
 
