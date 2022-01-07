@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Image, Button, Link, List, ListItem, Icon, useColorModeValue } from "@chakra-ui/react"
-import { IoLogoGithub, IoLogoLinkedin, IoPhonePortraitSharp } from "react-icons/io5"
+import { IoLogoGithub, IoLogoLinkedin, IoPhonePortraitSharp,IoDownloadSharp } from "react-icons/io5"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -82,6 +82,41 @@ const Page = () => {
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
+                        Skills
+                    </Heading>
+                    <BioSection>
+                        <BioYear>Html</BioYear>
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>Css</BioYear>
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>Javascript</BioYear>
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>React</BioYear>
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>Typescript</BioYear>
+                    </BioSection>
+                </Section>
+
+                <Section delay={0.4}>
+                    <Heading as="h3" variant="section-title">
+                        Resume
+                    </Heading>
+                    <BioSection>
+                        <Link href="http://www.upsara.com/images/j115291_.pdf">
+                            <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoDownloadSharp} />}>
+                                Download Resume
+                            </Button>
+                        </Link>
+                    </BioSection>
+                    
+                </Section>
+
+                <Section delay={0.5}>
+                    <Heading as="h3" variant="section-title">
                         I <span style={{ color: "#f00" }}>❤</span>
                     </Heading>
                     <Paragraph>
@@ -89,7 +124,7 @@ const Page = () => {
                     </Paragraph>
                 </Section>
 
-                <Section delay={0.3}>
+                <Section delay={0.6}>
                     <Heading as="h3" variant="section-title">
                         Contact Me
                     </Heading>
