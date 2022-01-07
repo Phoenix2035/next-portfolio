@@ -106,7 +106,7 @@ const Page = () => {
                         Resume
                     </Heading>
                     <BioSection>
-                        <Link href="http://www.upsara.com/images/j115291_.pdf">
+                        <Link href="http://www.upsara.com/images/j115291_.pdf" target="_blank">
                             <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoDownloadSharp} />}>
                                 Download Resume
                             </Button>
