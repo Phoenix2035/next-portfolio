@@ -120,7 +120,7 @@ const Page = () => {
                         I <span style={{ color: "#f00" }}>❤</span>
                     </Heading>
                     <Paragraph>
-                        Music, Playing, Series, Reading
+                        Music, Playing, Research, Reading
                     </Paragraph>
                 </Section>
 
