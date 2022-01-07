@@ -4,16 +4,17 @@ import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
+  height: 30px;
   font-weight: bold;
   font-size: 18px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  height: 30px;
   line-height: 20px;
   padding: 10px;
 
   img {
     transition: 200ms ease;
+    margin-right:0.5rem;
   }
 
   &:hover img {

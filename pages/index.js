@@ -1,7 +1,8 @@
 import { Box, Container, Heading, Image, Button, Link, List, ListItem, Icon, useColorModeValue } from "@chakra-ui/react"
-import NextLink from "next/link"
-import { ChevronRightIcon } from "@chakra-ui/icons"
 import { IoLogoGithub, IoLogoLinkedin, IoPhonePortraitSharp } from "react-icons/io5"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 
@@ -9,16 +10,29 @@ import Layout from "../components/layouts/article"
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import { BioSection, BioYear } from "../components/bio"
+import { Gmail } from "../components/gmail-svg"
 
 
 
 
 const Page = () => {
+    const notifyPhone = () => toast.success("Phone Copied Successfully");
+    const notifyGmail = () => toast.success("Gmail Copied Successfully");
+
+    const copyPhoneToClipboard = () => {
+        notifyPhone();
+    };
+
+    const copyGmailToClipboard = () => {
+        notifyGmail();
+    };
+
+
     return (
         <Layout>
             <Container  >
                 <Box borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")} p={3} mb={6} align="center" userSelect="none">
-                    Hello I&apos;m a frontend developer based in Iran!
+                    Hello I&apos;m a frontend developer from Iran!
                 </Box>
 
                 <Box display={{ md: "flex" }}>
@@ -36,37 +50,21 @@ const Page = () => {
                 </Box>
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        Work
+                        About Me
                     </Heading>
                     <Paragraph>I&apos;m a Frontend developer located in Iran. I love to create simple yet beautiful websites with
                         great user experience.
                         I&apos;m interested in the whole Frontend stack Like trying new things and building great projects. I
                         love to see movies and read books.
                         I believe everything is an Art when you put your consciousness in it. &nbsp;
-                        <NextLink href="/works/inkdrop">
-                            <Link>
-                                Inkdrop
-                            </Link>
-                        </NextLink>.
                     </Paragraph>
 
-                    <Box align="center" my={4}>
-                        <NextLink href="/works">
-                            <Button rightIcon={<ChevronRightIcon colorSchema="teal" />}>
-                                My Portfolio
-                            </Button>
-                        </NextLink>
-                    </Box>
                 </Section>
 
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        Bio
+                        Experience
                     </Heading>
-                    <BioSection>
-                        <BioYear>1991</BioYear>
-                        Born in Kermanshah, Iran.
-                    </BioSection>
                     <BioSection>
                         <BioYear>2020</BioYear>
                         Frontend Developer at Armaghan.
@@ -93,13 +91,33 @@ const Page = () => {
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
-                        Contact
+                        Contact Me
                     </Heading>
                     <List>
                         <ListItem>
-                            <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoPhonePortraitSharp} />}>
-                                09917240664
-                            </Button>
+                            <CopyToClipboard text={"+989917240664"}>
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoPhonePortraitSharp} />} onClick={copyPhoneToClipboard}>
+                                    +989917240664 (click me for copy)
+                                </Button>
+                            </CopyToClipboard>
+                        </ListItem>
+
+                        <ListItem>
+                            <ToastContainer
+                                position="top-center"
+                                autoClose={2000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                draggable
+                                pauseOnHover={false}
+                            />
+                            <CopyToClipboard text={"aligodosi@gmail.com"}>
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={Gmail} />} onClick={copyGmailToClipboard}>
+                                    Gmail (click me for copy)
+                                </Button>
+                            </CopyToClipboard>
                         </ListItem>
 
                         <ListItem>
