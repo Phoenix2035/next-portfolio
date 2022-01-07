@@ -41,7 +41,7 @@ const Page = () => {
                             Ali Ghodoosi
                         </Heading>
                         <p>
-                            Programmer Lover (Developer with ❤)
+                            Programing Lover (Developer with ❤)
                         </p>
                     </Box>
                     <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center">
